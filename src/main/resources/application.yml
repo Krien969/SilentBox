@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: SilentBox
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/SilentBox?serverTimezone=UTC&characterEncoding=UTF-8
+    username: ${SILENTBOX_USERNAME}
+    password: ${SILENTBOX_PASSWORD}
+#  data:
+#    redis:
+#      port: 6379
+#      host: localhost
+#      password:
+#      database: 0
+  servlet:
+    multipart:
+      max-file-size: 500MB
+
+upload:
+  path:
+    public-path: save/public
+    protect-path: save/protect
+    no-token-path: save/protect/no-token
+  max-size: 500000000
+
+sa-token:
+  token-name: Authorization
+  timeout: 259200
+  is-share: false
+  is-concurrent: true
+  token-prefix: Bearer
+  is-read-header: true
