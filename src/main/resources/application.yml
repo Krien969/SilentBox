@@ -6,12 +6,12 @@ spring:
     url: jdbc:mysql://localhost:3306/SilentBox?serverTimezone=UTC&characterEncoding=UTF-8
     username: ${SILENTBOX_USERNAME}
     password: ${SILENTBOX_PASSWORD}
-#  data:
-#    redis:
-#      port: 6379
-#      host: localhost
-#      password:
-#      database: 0
+  data:
+    redis:
+      port: 6379
+      host: localhost
+      password:
+      database: 0
   servlet:
     multipart:
       max-file-size: 500MB
